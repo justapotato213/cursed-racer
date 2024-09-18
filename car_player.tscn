@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://deskp28cxjjom"]
+[gd_scene load_steps=13 format=3 uid="uid://deskp28cxjjom"]
 
 [ext_resource type="Script" path="res://speedometer.gd" id="1_3g8pm"]
+[ext_resource type="Script" path="res://car_player.gd" id="1_ivin3"]
 [ext_resource type="Script" path="res://camera_follow.gd" id="2_eu0ra"]
 [ext_resource type="Script" path="res://vehicle_controller.gd" id="3_daca8"]
 [ext_resource type="Script" path="res://player_input.gd" id="4_7pwkx"]
@@ -38,6 +39,7 @@ properties/3/replication_mode = 1
 
 [node name="player" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.78901, 0)
+script = ExtResource("1_ivin3")
 
 [node name="Button" type="Button" parent="." node_paths=PackedStringArray("car_body")]
 offset_left = 1085.0
