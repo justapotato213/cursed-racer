@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2gyo6olo37ol"]
+
+[ext_resource type="PackedScene" uid="uid://deskp28cxjjom" path="res://car_player.tscn" id="1_4j8le"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yu1h2"]
+size = Vector3(300, 1, 300)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mg15x"]
+size = Vector3(300, 1, 300)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("1_4j8le")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54624, 1.78901, -5.06558)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_yu1h2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_mg15x")
